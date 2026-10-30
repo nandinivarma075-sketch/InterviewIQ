@@ -1,0 +1,256 @@
+/* ============================================================
+   Placeholder Page – Shared styles for non-landing pages
+   ============================================================ */
+
+.placeholder-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  max-width: 900px;
+  animation: fadeIn var(--transition-slow) both;
+}
+
+.placeholder-page__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.placeholder-page__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--navy-900);
+}
+
+.placeholder-page__subtitle {
+  font-size: var(--text-base);
+  color: var(--navy-400);
+  max-width: 560px;
+}
+
+.placeholder-page__card {
+  animation: fadeIn var(--transition-slow) 100ms both;
+}
+
+.placeholder-page__actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* ── Resume Drop Zone ─────────────────────────────────────── */
+.resume-dropzone {
+  border: 2px dashed var(--navy-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-16) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  background: var(--bg-subtle);
+  min-height: 260px;
+}
+
+.resume-dropzone:hover,
+.resume-dropzone--active {
+  border-color: var(--purple-400);
+  background: var(--purple-50);
+}
+
+.resume-dropzone--filled {
+  border-style: solid;
+  border-color: var(--success-400);
+  background: var(--success-50);
+  cursor: default;
+}
+
+.resume-dropzone__icon {
+  width: 64px;
+  height: 64px;
+  background: var(--purple-100);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple-600);
+  margin-bottom: var(--space-2);
+}
+
+.resume-dropzone__title {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--navy-700);
+}
+
+.resume-dropzone__sub {
+  font-size: var(--text-sm);
+  color: var(--navy-400);
+}
+
+.resume-dropzone__sub span {
+  color: var(--purple-600);
+  font-weight: var(--font-medium);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.resume-dropzone__hint {
+  font-size: var(--text-xs);
+  color: var(--navy-300);
+}
+
+/* Filled state */
+.resume-dropzone__filled {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 420px;
+}
+
+.resume-dropzone__file-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--success-100);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--success-600);
+  flex-shrink: 0;
+}
+
+.resume-dropzone__file-info { flex: 1; text-align: left; }
+.resume-dropzone__file-name { font-size: var(--text-sm); font-weight: var(--font-semibold); color: var(--navy-800); }
+.resume-dropzone__file-size { font-size: var(--text-xs); color: var(--navy-400); }
+
+.resume-dropzone__check {
+  color: var(--success-500);
+  display: flex;
+}
+
+.resume-dropzone__remove {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--error-100);
+  color: var(--error-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.resume-dropzone__remove:hover {
+  background: var(--error-500);
+  color: white;
+}
+
+/* ── Role Cards ──────────────────────────────────────────── */
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.role-card {
+  background: var(--bg-base);
+  border: var(--border-default);
+  border-radius: var(--radius-xl);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-card);
+}
+
+.role-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--purple-300);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.role-card--selected {
+  border-color: var(--purple-500);
+  border-width: 2px;
+  box-shadow: var(--shadow-brand);
+}
+
+.role-card__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.role-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.role-card__title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--navy-800);
+}
+
+.role-card__check {
+  width: 22px;
+  height: 22px;
+  background: var(--gradient-brand);
+  color: white;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.role-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+/* ── Generic "Coming Soon" state ─────────────────────────── */
+.page-coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.page-coming-soon__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-2xl);
+  background: var(--purple-50);
+  color: var(--purple-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-coming-soon__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--navy-900);
+}
+
+.page-coming-soon__sub {
+  font-size: var(--text-base);
+  color: var(--navy-400);
+  max-width: 400px;
+}

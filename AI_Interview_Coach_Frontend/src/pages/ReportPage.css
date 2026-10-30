@@ -1,0 +1,163 @@
+/* ============================================================
+   Report Page – Styles
+   ============================================================ */
+
+/* Overview card — score ring + metadata side by side */
+.report-overview__body {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.report-overview__score {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.report-overview__score-ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.report-overview__score-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+
+.report-overview__score-val {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-black);
+  color: var(--navy-900);
+  line-height: 1;
+}
+
+.report-overview__score-unit {
+  font-size: var(--text-xs);
+  color: var(--navy-400);
+}
+
+/* Chart card */
+.report-chart-card {
+  animation: fadeIn var(--transition-slow) 100ms both;
+}
+
+/* Category grid */
+.report-categories__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.report-category-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+/* Highlights list */
+.report-highlights {
+  margin-top: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+}
+
+.report-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.report-highlight--good {
+  background: var(--success-50);
+  color: var(--success-600);
+}
+
+.report-highlight--warn {
+  background: var(--warning-50);
+  color: var(--warning-600);
+}
+
+.report-highlight svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Grade row */
+.report-grade-row .card-body {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.report-grade-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 60px;
+}
+
+.report-grade-pill__cat {
+  font-size: var(--text-xs);
+  color: var(--navy-400);
+}
+
+.report-grade-pill__grade {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+}
+
+/* Shared chart tooltip (reuse from dashboard) */
+.chart-tooltip {
+  background: var(--navy-900);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  box-shadow: var(--shadow-lg);
+}
+
+.chart-tooltip__label {
+  font-size: var(--text-xs);
+  color: var(--navy-300);
+}
+
+.chart-tooltip__value {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--purple-400);
+}
+
+.chart-tooltip__value span {
+  font-size: var(--text-xs);
+  color: var(--navy-400);
+  font-weight: var(--font-regular);
+}
+
+@media (max-width: 600px) {
+  .report-categories__grid {
+    grid-template-columns: 1fr;
+  }
+}

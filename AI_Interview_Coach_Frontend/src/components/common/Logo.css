@@ -1,0 +1,57 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.logo__icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gradient-brand);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-brand-lg);
+}
+
+.logo--sm .logo__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+}
+
+.logo--lg .logo__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo__name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--navy-900);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.2;
+}
+
+.logo--lg .logo__name {
+  font-size: var(--text-2xl);
+}
+
+.logo--sm .logo__name {
+  font-size: var(--text-base);
+}
+
+.logo__tagline {
+  font-size: var(--text-xs);
+  color: var(--navy-400);
+  font-weight: var(--font-medium);
+}

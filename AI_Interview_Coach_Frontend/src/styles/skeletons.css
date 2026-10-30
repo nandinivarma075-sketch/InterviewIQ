@@ -1,0 +1,36 @@
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--navy-100) 25%, var(--navy-50) 50%, var(--navy-100) 75%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes skeleton-shimmer {
+  0%   { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+.skeleton--icon  { width: 40px; height: 40px; border-radius: var(--radius-lg); margin-bottom: var(--space-2); }
+.skeleton--label { width: 80px; height: 12px; margin-bottom: var(--space-2); }
+.skeleton--value { width: 50px; height: 28px; }
+
+.stat-card--loading {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5);
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: var(--border-subtle);
+}
+
+[data-theme="dark"] .skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.07) 25%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.07) 75%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

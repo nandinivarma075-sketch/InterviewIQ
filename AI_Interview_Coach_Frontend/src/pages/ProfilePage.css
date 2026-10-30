@@ -1,0 +1,146 @@
+.profile-page { max-width: 900px; }
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+/* Avatar card */
+.profile-avatar-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-brand);
+  color: white;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-brand-lg);
+  letter-spacing: 1px;
+}
+
+.profile-name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--navy-900);
+}
+
+.profile-role {
+  font-size: var(--text-sm);
+  color: var(--navy-400);
+  margin-top: var(--space-1);
+}
+
+/* Info list */
+.profile-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.profile-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.profile-info-icon {
+  color: var(--purple-500);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.profile-info-label {
+  font-size: var(--text-xs);
+  color: var(--navy-400);
+  font-weight: var(--font-medium);
+  margin-bottom: 2px;
+}
+
+.profile-info-value {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--navy-800);
+}
+
+/* Stats grid */
+.profile-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.profile-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-5);
+  background: var(--bg-subtle);
+  border-radius: var(--radius-xl);
+  border: var(--border-subtle);
+}
+
+.profile-stat__value {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-stat__label {
+  font-size: var(--text-xs);
+  color: var(--navy-400);
+  font-weight: var(--font-medium);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .profile-grid { grid-template-columns: 1fr; }
+  .profile-grid .card[style*="grid-column"] { grid-column: unset; }
+  .profile-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Radar chart wrapper */
+.profile-radar-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Reuse chart-tooltip from dashboard/report */
+.chart-tooltip {
+  background: var(--navy-900);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  box-shadow: var(--shadow-lg);
+}
+.chart-tooltip__label { font-size: var(--text-xs); color: var(--navy-300); }
+.chart-tooltip__value {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--purple-400);
+}
+.chart-tooltip__value span { font-size: var(--text-xs); color: var(--navy-400); font-weight: var(--font-regular); }
+

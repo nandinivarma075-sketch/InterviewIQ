@@ -1,0 +1,18 @@
+services:
+  interviewiq:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
+      - JWT_SECRET=replace_with_a_secure_random_jwt_secret_in_production
+      - DB_PATH=/app/backend/data/interviewiq.db
+    volumes:
+      - interviewiq_data:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  interviewiq_data:
