@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "InterviewIQ – AI Interview Coach Full-Stack Platform",
   "scripts": {
-    "install:all": "npm --prefix backend install && npm --prefix AI_Interview_Coach_Frontend install",
-    "postinstall": "npm --prefix backend install && npm --prefix AI_Interview_Coach_Frontend install",
+    "install:all": "npm --prefix backend install && npm --prefix AI_Interview_Coach_Frontend install --include=dev",
+    "postinstall": "npm --prefix backend install && npm --prefix AI_Interview_Coach_Frontend install --include=dev",
     "build": "npm --prefix AI_Interview_Coach_Frontend run build",
     "start": "npm --prefix backend start",
     "dev:backend": "npm --prefix backend run dev",
